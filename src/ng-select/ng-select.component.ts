@@ -259,6 +259,7 @@ export class NgSelectComponent implements OnDestroy, OnChanges, AfterViewInit, C
                     break;
                 case KeyCode.Backspace:
                     this._handleBackspace();
+                    $event.stopPropagation();
                     break;
             }
         } else if ($event.key && $event.key.length === 1) {
